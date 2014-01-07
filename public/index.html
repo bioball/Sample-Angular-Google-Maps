@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+
+  <section id="map" ng-controller="MapCtrl">
+    <div ui-map="thismap" ui-options="mapOptions" class="map-canvas"></div>
+  </section>
+
+
+  <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="bower_components/angular-ui-utils/modules/event/event.js "></script>
+  <script type="text/javascript" src="bower_components/angular-ui-map/src/map.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=onGoogleReady"></script>
+
+  <script src="main.js"></script>
+
+  <script>
+    var onGoogleReady = function(){
+      angular.bootstrap(document.body, ['AppModule']);
+    }
+  </script>
+</body>
